@@ -1,4 +1,3 @@
-# Train YOWOv2 on UCF24 dataset
 python train.py \
         --cuda \
         -d trash \

@@ -1,6 +1,10 @@
 checkpoints/
 ucf24/
-trash/
+trash/labels
+trash/rgb-images
+trash/video
+trash/videos
+
 video_test/
 results/
 weights/
