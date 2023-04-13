@@ -1,0 +1,14 @@
+checkpoints/
+ucf24/
+trash/
+video_test/
+results/
+weights/
+
+*.pt
+*.pth
+*.pkl
+*.pyc
+__pycache__
+det_results
+.vscode
