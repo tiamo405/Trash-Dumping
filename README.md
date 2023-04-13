@@ -1,5 +1,5 @@
 # YOWOv2: A Stronger yet Efficient Multi-level Detection Framework for Real-time Spatio-temporal Action Detection
-
+# Tiamo405
 ## Overview of YOWOv2
 ![image](./img_files/yowov2.png)
 ## 
@@ -31,21 +31,70 @@ pip install -r requirements.txt
 ![image](./img_files/ucf24_v_SalsaSpin_g03_c01.gif)
 
 # Dataset
-
+```
+trash   __videos        __ Walking        __video1.mp4
+        |               |                |__video2.mp4  
+        |               |                |__.....
+        |               |__ trashDumping  __video1.mp4
+        |                                |__video2.mp4  
+        |                                |__.....   
+        |__label        __ Walking       __video1  __ frame11.txt
+        |               |               |         |__ frame12.txt
+        |               |               |         |__ .....        
+        |               |               |__video2   __ frame11.txt
+        |               |               |          |__ frame12.txt
+        |               |               |          |__ .....
+        |               |               |__ .....
+        |               |__ trashDumping __video1 __ frame21.txt
+        |                               |         |__ frame22.txt
+        |                               |         |__ .....        
+        |                               |__video2   __ frame21.txt
+        |                               |          |__ frame22.txt
+        |                               |          |__ .....
+        |                               |__ .....    
+        |__rgb-images    __ Walking     __video1   __ frame11.txt
+        |               |               |         |__ frame12.txt
+        |               |               |         |__ .....        
+        |               |               |__video2   __ frame11.txt
+        |               |               |          |__ frame12.txt
+        |               |               |          |__ .....
+        |               |               |__ .....
+        |               |__ trashDumping __video1  __ frame21.txt
+        |                                |         |__ frame22.txt
+        |                                |         |__ .....        
+        |                                |__video2   __ frame21.txt
+        |                                |          |__ frame22.txt
+        |                                |          |__ .....
+        |                                |__ .....    
+        |__testlist.txt
+        |__trainlist.txt                
+```
 ## Trash Dumping
 You can download **Trash Dumping** from the following links:
 
 [GDrive](https://github.com/tiamo405/Trash-Dumping)
 ## Custom data
+* Create folder labels, rgb-images
+```Shell
+python extract_frame/video2frame.py --folder_videos trash/videos/Walking --label Walking
+```
+```Shell
+python extract_frame/video2frame.py --folder_videos trash/videos/trashDumping --label trashDumping
+```
+* Create testlist.txt, trainlist.txt
+```Shell
+python trash/build_split.py
+```
 
 # Experiment
 
 * Trash Dumping
   
-|     Model      |    Clip    |    mAP    |   FPS   |    weight    |
-|----------------|------------|-----------|---------|--------------|
-|  YOWOv2-Nano   |     16     |   12.6    |   40    | [ckpt]() |
-|  YOWOv2-Tiny   |     16     |   14.9    |   49    | [ckpt]() |
+|     Model      |   weight |
+|----------------|----------|
+|  YOWOv2-Nano   | [ckpt]() |
+|  YOWOv2-Tiny   | [ckpt]() |
+|  YOWOv2-medium | [ckpt]() |
 
 
 ## Train YOWOv2
@@ -78,8 +127,15 @@ python demo.py --cuda \
 or you can just run the script:
 ```Shell
 bash demo_trash.sh
-
 ```
+## Note
+```
+Author  : Tran Phuong Nam
+Contact : nam05052002@gmail.com
+Mentor  : Cong Tran
+Lab     : Naver
+```
+
 
 ## References
 

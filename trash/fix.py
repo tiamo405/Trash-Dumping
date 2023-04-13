@@ -15,7 +15,7 @@ def rename(path) :
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Build file list')
-    parser.add_argument('--raw_path', type=str, default='./ucf24')
+    parser.add_argument('--raw_path', type=str, default='./trash')
     parser.add_argument('--out_list_path', type=str, default='./')
     parser.add_argument('--shuffle', action='store_true', default=False)
     args = parser.parse_args()
