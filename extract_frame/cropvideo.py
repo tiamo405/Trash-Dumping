@@ -88,7 +88,7 @@ def crop_video_to_image(path_video, folder_save, label, model_detect_person, mod
                     write_txt(noidung= '1 {} {} {} {}'.format(left, top, right, bottom),\
                             path= os.path.join(path_save_labels_id, str(id_frame).zfill(5) + '.txt'))
                 else :
-                    write_txt(noidung= '0 {} {} {} {}'.format(left, top, right, bottom),\
+                    write_txt(noidung= '2 {} {} {} {}'.format(left, top, right, bottom),\
                             path= os.path.join(path_save_labels_id, str(id_frame).zfill(5) + '.txt'))
 
                 cv2.putText(frame, str(track_id), (int(left) - 6, int(top) + 30), font, 1.0, (colors[track_id % len(colors)]), 1)

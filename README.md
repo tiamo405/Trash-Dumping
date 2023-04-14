@@ -22,13 +22,8 @@ pip install -r requirements.txt
 
 ## Visualization
 
-![image](./img_files/ucf24_v_Basketball_g07_c04.gif)
-![image](./img_files/ucf24_v_Biking_g01_c01.gif)
-![image](./img_files/ucf24_v_Fencing_g01_c06.gif)
-
-![image](./img_files/ucf24_v_HorseRiding_g01_c03.gif)
-![image](./img_files/ucf24_v_IceDancing_g02_c05.gif)
-![image](./img_files/ucf24_v_SalsaSpin_g03_c01.gif)
+![image](./img_files/trash_0001.gif)
+![image](./img_files/Walking_0000.gif)
 
 # Dataset
 ```
@@ -92,9 +87,9 @@ python trash/build_split.py
   
 |     Model      |   weight |
 |----------------|----------|
-|  YOWOv2-Nano   | [ckpt]() |
-|  YOWOv2-Tiny   | [ckpt]() |
-|  YOWOv2-medium | [ckpt]() |
+|  YOWOv2-Nano   | [ckpt - chua co]() |
+|  YOWOv2-Tiny   | [ckpt - chua co]() |
+|  YOWOv2-medium | [ckpt](https://drive.google.com/file/d/1V6cENAtE7Tidxj1P01ixnIbzNVb6WtNf/view?usp=share_link) |
 
 
 ## Train YOWOv2
@@ -119,7 +114,7 @@ python demo.py --cuda \
                 -v yowo_v2_medium \
                 --num_classes 2 \
                 -size 224 \
-                --weight checkpoints/trash/yowo_v2_medium/yowo_v2_medium_epoch_30.pth \
+                --weight checkpoints/trash/yowo_v2_medium/yowo_v2_medium_epoch_50.pth \
                 --video video_test/v_Basketball_g01_c02.mp4 \
                 --vis_thresh 0.5 \
                 -d trash \

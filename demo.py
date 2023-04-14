@@ -220,7 +220,7 @@ def detect(args, model, device, transform, class_names, class_colors):
 
     # generate GIF
     if args.gif:
-        save_name = os.path.join(save_path, 'detect.gif')
+        save_name = os.path.join(save_path, args.video.split('/')[-1].split('.')[0]+ '.gif')
         print('generating GIF ...')
         imageio.mimsave(save_name, image_list, fps=fps)
         print('GIF done: {}'.format(save_name))

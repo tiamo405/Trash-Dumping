@@ -27,7 +27,7 @@ dataset_config = {
         # class names
         'valid_num_classes': 2,
         'label_map': (
-                    'trashDumping',     'BasketballDunk'
+                    'trashDumping',     'Walking'
                 ),
     },
     'ucf24': {

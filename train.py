@@ -171,7 +171,7 @@ def train():
         resume=args.resume
         )
     print(model)
-    print("--------------------------\n--------------------------------")
+    print("--------------------------\n--------------------------")
     model = model.to(device).train()
 
     # SyncBatchNorm
