@@ -43,7 +43,7 @@ def build_split_data(raw_data) :
         N = len(fvideos)
         n_train = int(N * 0.8)
         n_test = N- n_train
-        np.random.shuffle(fvideos)
+        # np.random.shuffle(fvideos)
 
         train_video, test_video = fvideos[:n_train], fvideos[n_train:]
         create_txt(raw_data= raw_data, label= label, arr_videos= train_video, mode= 'train')

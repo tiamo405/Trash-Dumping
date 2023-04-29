@@ -4,10 +4,12 @@ trash/labels
 trash/rgb-images
 trash/video
 trash/videos
+trash/video_detect
 
 video_test/
 results/
 weights/
+
 
 *.pt
 *.pth

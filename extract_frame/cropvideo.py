@@ -26,7 +26,7 @@ def crop_video_to_image(path_video, folder_save, label, model_detect_person, mod
     path_save_image = os.path.join(folder_save, 'rgb-images', label)
     path_save_txt = os.path.join(folder_save, 'labels', label)
 
-    path_save_video = os.path.join(folder_save, 'video')
+    path_save_video = os.path.join(folder_save, 'video_detect')
 
     os.makedirs(path_save_video, exist_ok= True)
     video_out_path = os.path.join(path_save_video, name_video+'.avi')

@@ -49,8 +49,8 @@ def get_opt():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dir_data', type=str, default= 'trash')
     parser.add_argument('--phase', type= str, default='train')
-    parser.add_argument('--folder_videos', type= str, default='trash/videos/Walking')
-    parser.add_argument('--label', type=str, default='Walking')
+    parser.add_argument('--folder_videos', type= str, default='trash/videos/Split_video')
+    parser.add_argument('--label', type=str, default='trashDumping')
     opt = parser.parse_args()
     return opt
 if __name__ == "__main__":
